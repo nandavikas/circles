@@ -17,6 +17,7 @@
         <img src="web3.PNG" alt="Image">
     </div>
     <script>
+        var flag = 0;
         var script = document.createElement("script");
         script.type = "text/javascript";
         $(window).on('scroll', function () {
@@ -27,9 +28,14 @@
                     .attr('type', 'text/javascript')
                     .text(`window.ymConfig = { bot: 'x1604292460119' };  (function () {var w=window,ic=w.YellowMessenger;if("function"===typeof ic)ic("reattach_activator"),ic("update",ymConfig);else{var d=document,i=function(){i.c(arguments)};function l(){var e=d.createElement("script");e.type="text/javascript",e.async=!0,e.src="https://app.yellowmessenger.com/widget/main.js";var t=d.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}i.q=[],i.c=function(e){i.q.push(e)},w.YellowMessenger=i,w.attachEvent?l():l()}})();`)
                     .appendTo('body');
+                if (flag == 0) {
+                    flag += 1
+                    setTimeout(() => {
+                        YellowMessengerPlugin.toggleChat()
+                    }, 2000)
+                }
             }
         });
     </script>
 </body>
-
 </html>
