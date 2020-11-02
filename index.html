@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Finally a telco for the people</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js">
+</script>
+
+<body style="text-align:center;" id="body">
+    <p id="GFG_UP" style="font-size: 17px; 
+			font-weight: bold;">
+    </p>
+    <div class="div">
+        <img src="web-1.PNG" alt="Image">
+        <img src="web2.PNG" alt="Image">
+        <img src="web3.PNG" alt="Image">
+    </div>
+    <script>
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        $(window).on('scroll', function () {
+            if ($(window).scrollTop() >= $(
+                '.div').offset().top + $('.div').
+                    outerHeight() - window.innerHeight) {
+                $('<script>')
+                    .attr('type', 'text/javascript')
+                    .text(`window.ymConfig = { bot: 'x1604292460119' };  (function () {var w=window,ic=w.YellowMessenger;if("function"===typeof ic)ic("reattach_activator"),ic("update",ymConfig);else{var d=document,i=function(){i.c(arguments)};function l(){var e=d.createElement("script");e.type="text/javascript",e.async=!0,e.src="https://app.yellowmessenger.com/widget/main.js";var t=d.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}i.q=[],i.c=function(e){i.q.push(e)},w.YellowMessenger=i,w.attachEvent?l():l()}})();`)
+                    .appendTo('body');
+            }
+        });
+    </script>
+</body>
+
+</html>
